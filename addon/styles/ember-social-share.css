@@ -10,11 +10,11 @@ svg {
   width: 16px;
   height: 16px;
   /* Default to white unless otherwise defined (Google Plus as example) */
-  fill: white;
+  fill: #ffffff;
 }
 
 .share-button {
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
   white-space: nowrap;
   height: 20px;
