@@ -1,12 +1,20 @@
 button {
   height: 20px;
+  padding: 0;
   font-family: Helvetica, Arial, sans-serif;
+  margin: 0px 2px;
 }
+
 span {
-  margin-top: auto;
-  margin-bottom: auto;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 700;
+  padding: 3px 4px;
 }
+
 svg {
+  padding: 2px 0 0 4px;
+}
+path {
   width: 16px;
   height: 16px;
   /* Default to white unless otherwise defined (Google Plus as example) */
@@ -21,6 +29,7 @@ svg {
   font-size: 11px;
   border-radius: 3px;
 }
+
 .share-button:hover {
   opacity: .6;
   transition: opacity .25s ease-in-out;
@@ -29,11 +38,18 @@ svg {
   -o-transition: opacity .25s ease-in-out;
 }
 
+.linkedin-div,
+.fb-div,
+.twitter-div,
+.vk-div,
+.gplus-div {
+  display: inline-flex;
+  align-items: flex-start;
+}
+
 .fb-share-button {
   background: #4267b2;
   border: 1px solid #4267b2;
-  -webkit-font-smoothing: antialiased;
-  margin: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -44,17 +60,12 @@ svg {
   border: 1px solid rgb(98, 135, 174);
 }
 
-.gplus-share-button {
-  background: #ffffff;
-  border: 1px solid #d0d0d0;
-}
-
-.gplus-share-button svg {
-  vertical-align: middle;
-}
-
 .gplus-share-button span {
-  color: black;
+  color: #2f2f2f;
+}
+
+.gplus-share-button path {
+  fill: #DA4B42;
 }
 
 .linkedin-share-button {
@@ -67,36 +78,17 @@ svg {
   border: 1px solid #1b95e0;
 }
 
-.linkedin-div,
-.fb-div,
-.twitter-div,
-.vk-div,
-.gplus-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.linkedin-div span,
-.fb-div span,
-.twitter-div span,
-.vk-div span,
-.gplus-div span {
-  margin-left: 5px;
-}
-
-
-
 .share-panel {
   display: flex;
 }
+
 @media (max-width: 768px) {
   .adaptive-button span {
     visibility: hidden;
     display: none;
   }
-  .adaptive-button {
-    padding-left: 1px;
-    padding-right: 1px;
+  .adaptive-button svg {
+    padding: 0;
+    margin: 2px 3px;
   }
 }
